@@ -1,0 +1,260 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6102,        251]
+NotebookOptionsPosition[      3958,        172]
+NotebookOutlinePosition[      4394,        189]
+CellTagsIndexPosition[      4351,        186]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["ModelBuilding", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["ModelBuilding`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["ModelBuilding/ref/$mbGAP", "Categorization",
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["$MBGAP", "ObjectName",
+ CellChangeTimes->{{3.526946535945952*^9, 3.5269465367690573`*^9}},
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData["$MBGAP"], "InlineFormula"],
+ "\[LineSeparator]$MBGAP contains the name of GAP, which is \"gap\" within \
+the standard linux installation and after the installation of the GAP package \
+from its webpage, it is \"/Applications/gap4r4/bin/gap.sh\", but it depends \
+on the installation. If you do not have the standard installation of GAP, but \
+installed it manually, make sure that $MBGAP contains the full pathname to \
+the gap executable."
+}], "Usage",
+ CellChangeTimes->{{3.52688380402809*^9, 3.5268838260498857`*^9}, {
+  3.5268839392153797`*^9, 3.526884087108721*^9}, {3.5269465389247723`*^9, 
+  3.5269465499120893`*^9}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->1908401893],
+
+Cell[TextData[{
+ "See ",
+ ButtonBox["TutorialA4.nb",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{
+      ParentDirectory[
+       ParentDirectory[]], "Tutorials"}, "Tutorial A4.nb", CharacterEncoding -> 
+     "UTF-8"], None}],
+ " for an example notebook."
+}], "Tutorials",
+ CellChangeTimes->{{3.526851147922578*^9, 3.526851220016498*^9}},
+ CellID->1440733233]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{-5, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[907, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[978, 41, 79, 2, 70, "Categorization",
+ CellID->686433507],
+Cell[1060, 45, 86, 2, 70, "Categorization",
+ CellID->605800465],
+Cell[1149, 49, 83, 2, 70, "Categorization",
+ CellID->468444828],
+Cell[1235, 53, 69, 1, 70, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1341, 59, 55, 1, 19, "KeywordsSection",
+ CellID->477174294],
+Cell[1399, 62, 45, 1, 70, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1481, 68, 65, 1, 19, "TemplatesSection",
+ CellID->1872225408],
+Cell[1549, 71, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1646, 75, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1731, 79, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[1815, 83, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1934, 90, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1990, 93, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2056, 97, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2128, 101, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2195, 105, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2267, 109, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2331, 113, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2395, 117, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2461, 121, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2542, 125, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2646, 132, 117, 2, 63, "ObjectName",
+ CellID->1224892054],
+Cell[2766, 136, 700, 13, 142, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3503, 154, 58, 1, 43, "TutorialsSection",
+ CellID->1908401893],
+Cell[3564, 157, 378, 12, 16, "Tutorials",
+ CellID->1440733233]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

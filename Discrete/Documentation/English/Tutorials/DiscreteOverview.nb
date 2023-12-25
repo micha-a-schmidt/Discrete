@@ -1,0 +1,417 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11728,        407]
+NotebookOptionsPosition[      8229,        300]
+NotebookOutlinePosition[      8641,        316]
+CellTagsIndexPosition[      8598,        313]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Overview", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["Discrete Package", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["Discrete`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["Discrete/tutorial/DiscreteOverview", "Categorization",
+ CellLabel->"URI"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Synonyms", "SynonymsSection",
+ CellID->1427418553],
+
+Cell["XXXX", "Synonyms",
+ CellID->1251652828]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552],
+
+Cell["XXXX", "Keywords",
+ CellID->1251852827]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->218895918],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->795871300],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->199739161],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->40625308],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->357121918],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->35949532],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->929432370],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Discrete Overview", "TOCDocumentTitle"],
+
+Cell[TextData[{
+ ButtonBox[Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["A", "4"], " "}], TraditionalForm]], "InlineMath"],
+  BaseStyle->"Link",
+  ButtonData->"paclet:Discrete/tutorial/Example A4#509267359"],
+ ButtonBox["Example given in accompanying paper",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Discrete/tutorial/Example A4#509267359"]
+}], "TOCChapter"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Tutorial A4",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/tutorial/Tutorial A4#509267359"]], "TOCChapter"],
+
+Cell[TextData[ButtonBox["Initialization",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:Discrete/tutorial/Tutorial A4#143330639"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Simple Calculations",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:Discrete/tutorial/Tutorial A4#1019526329"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Calculations with Clebsch-Gordan coefficients",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:Discrete/tutorial/Tutorial A4#1615334985"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Saving and Loading of the Group Data",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:Discrete/tutorial/Tutorial A4#519827025"]], "TOCSubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["ReferencePages/Symbols",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/$MBGAP"]], "TOCChapter"],
+
+Cell[TextData[ButtonBox["$MBGAP",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/$MBGAP"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["$MBPATH",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/$MBPATH"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["$MBVerbose",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/$MBVerbose"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBJoin",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBJoin"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBUnion",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBUnion"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBconvertGAPToMathematica",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBconvertGAPToMathematica"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBconvertMathematicaToGAP",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBconvertMathematicaToGAP"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBextractOneRep",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBextractOneRep"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetCGC",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetCGC"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetCGCcc",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetCGCcc"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetCharacterProduct",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetCharacterProduct"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetCharacterTable",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetCharacterTable"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetCovariants",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetCovariants"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetDimensionOfRep",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetDimensionOfRep"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetDimensionsOfReps",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetDimensionsOfReps"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetFlavonPotential",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetFlavonPotential"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetKroneckerProduct",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetKroneckerProduct"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetMajoranaMassMatrix",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetMajoranaMassMatrix"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetMassMatrix",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetMassMatrix"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetMultiplicity",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetMultiplicity"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetNumberOfReps",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetNumberOfReps"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetRepMatrices",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetRepMatrices"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetRepVector",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetRepVector"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetSizeOfGroup",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetSizeOfGroup"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBgetStructureDescription",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBgetStructureDescription"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBisUnitary",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBisUnitary"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBisUnitaryRep",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBisUnitaryRep"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBloadGAPGroup",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBloadGAPGroup"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBloadGAPSmallGroup",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBloadGAPSmallGroup"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBloadGeneratedGAPGroup",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBloadGeneratedGAPGroup"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBloadGroupManually",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBloadGroupManually"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBmultiply",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBmultiply"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MBsimplifyCovariants",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Discrete/ref/MBsimplifyCovariants"]], "TOCSection"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{-2, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TutorialPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 324, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[906, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[977, 41, 81, 2, 32, "Categorization",
+ CellID->686433507],
+Cell[1061, 45, 89, 2, 32, "Categorization",
+ CellID->605800465],
+Cell[1153, 49, 78, 2, 32, "Categorization",
+ CellID->468444828],
+Cell[1234, 53, 79, 1, 32, "Categorization"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1350, 59, 56, 1, 29, "SynonymsSection",
+ CellID->1427418553],
+Cell[1409, 62, 45, 1, 70, "Synonyms",
+ CellID->1251652828]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1491, 68, 56, 1, 19, "KeywordsSection",
+ CellID->1427428552],
+Cell[1550, 71, 45, 1, 70, "Keywords",
+ CellID->1251852827]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1632, 77, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1688, 80, 63, 2, 70, "Details",
+ CellID->218895918],
+Cell[1754, 84, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[1826, 88, 66, 2, 70, "Details",
+ CellID->795871300],
+Cell[1895, 92, 71, 2, 70, "Details",
+ CellID->199739161],
+Cell[1969, 96, 60, 2, 70, "Details",
+ CellID->40625308],
+Cell[2032, 100, 61, 2, 70, "Details",
+ CellID->357121918],
+Cell[2096, 104, 62, 2, 70, "Details",
+ CellID->35949532],
+Cell[2161, 108, 78, 2, 70, "Details",
+ CellID->929432370],
+Cell[2242, 112, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2346, 119, 45, 0, 169, "TOCDocumentTitle"],
+Cell[2394, 121, 369, 10, 46, "TOCChapter"],
+Cell[CellGroupData[{
+Cell[2788, 135, 137, 2, 26, "TOCChapter"],
+Cell[2928, 139, 146, 3, 19, "TOCSubsection"],
+Cell[3077, 144, 152, 3, 19, "TOCSubsection"],
+Cell[3232, 149, 178, 3, 19, "TOCSubsection"],
+Cell[3413, 154, 168, 3, 19, "TOCSubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3618, 162, 128, 2, 46, "TOCChapter"],
+Cell[3749, 166, 112, 2, 28, "TOCSection"],
+Cell[3864, 170, 114, 2, 22, "TOCSection"],
+Cell[3981, 174, 120, 2, 22, "TOCSection"],
+Cell[4104, 178, 112, 2, 22, "TOCSection"],
+Cell[4219, 182, 114, 2, 22, "TOCSection"],
+Cell[4336, 186, 150, 2, 22, "TOCSection"],
+Cell[4489, 190, 150, 2, 22, "TOCSection"],
+Cell[4642, 194, 130, 2, 70, "TOCSection"],
+Cell[4775, 198, 116, 2, 70, "TOCSection"],
+Cell[4894, 202, 120, 2, 70, "TOCSection"],
+Cell[5017, 206, 142, 2, 70, "TOCSection"],
+Cell[5162, 210, 138, 2, 70, "TOCSection"],
+Cell[5303, 214, 130, 2, 70, "TOCSection"],
+Cell[5436, 218, 138, 2, 70, "TOCSection"],
+Cell[5577, 222, 142, 2, 70, "TOCSection"],
+Cell[5722, 226, 140, 2, 70, "TOCSection"],
+Cell[5865, 230, 142, 2, 70, "TOCSection"],
+Cell[6010, 234, 146, 2, 70, "TOCSection"],
+Cell[6159, 238, 130, 2, 70, "TOCSection"],
+Cell[6292, 242, 134, 2, 70, "TOCSection"],
+Cell[6429, 246, 134, 2, 70, "TOCSection"],
+Cell[6566, 250, 132, 2, 70, "TOCSection"],
+Cell[6701, 254, 128, 2, 70, "TOCSection"],
+Cell[6832, 258, 132, 2, 70, "TOCSection"],
+Cell[6967, 262, 150, 2, 70, "TOCSection"],
+Cell[7120, 266, 122, 2, 70, "TOCSection"],
+Cell[7245, 270, 128, 2, 70, "TOCSection"],
+Cell[7376, 274, 128, 2, 70, "TOCSection"],
+Cell[7507, 278, 138, 2, 70, "TOCSection"],
+Cell[7648, 282, 146, 2, 70, "TOCSection"],
+Cell[7797, 286, 138, 2, 70, "TOCSection"],
+Cell[7938, 290, 120, 2, 70, "TOCSection"],
+Cell[8061, 294, 140, 2, 70, "TOCSection"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

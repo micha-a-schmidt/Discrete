@@ -1,0 +1,325 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13519,        317]
+NotebookOptionsPosition[     11750,        280]
+NotebookOutlinePosition[     12084,        295]
+CellTagsIndexPosition[     12041,        292]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Discrete`ModelBuildingTools`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"92c1365b-a8fa-40b1-82c5-00c223cc3243"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TEST", "=", 
+  RowBox[{"RunProcess", "[", 
+   RowBox[{
+    RowBox[{"{", "\"\<cat\>\"", "}"}], ",", "All", ",", 
+    RowBox[{
+    "\"\<Read(\\\"\>\"", "<>", "$MBPATH", "<>", 
+     "\"\<extractGroupData.gap\\\");;MBgetGroupInfo(SmallGroup(12,3));;quit;;\
+\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.787726701686729*^9, 3.7877267142054653`*^9}, 
+   3.7877267623382673`*^9},
+ CellLabel->"In[2]:=",ExpressionUUID->"658607f8-2293-4387-ab43-9ddecd82c199"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"ExitCode\"\>", "\[Rule]", "0"}], ",", 
+   RowBox[{"\<\"StandardOutput\"\>", 
+    "\[Rule]", \
+"\<\"Read(\\\"/home/lin/cdoering/.Mathematica/Applications/Discrete/\
+extractGroupData.gap\\\");;MBgetGroupInfo(SmallGroup(12,3));;quit;;\"\>"}], 
+   ",", 
+   RowBox[{"\<\"StandardError\"\>", "\[Rule]", "\<\"\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.78772676279802*^9, 3.787899980930991*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"59313c66-cf0c-4fff-8652-3ffce0e55e38"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"OUTPUT", "=", 
+  RowBox[{"RunProcess", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"$MBGAP", ",", "\"\<-b\>\"", ",", "\"\<-q\>\""}], "}"}], ",", 
+    "All", ",", 
+    RowBox[{
+    "\"\<Read(\\\"\>\"", "<>", "$MBPATH", "<>", 
+     "\"\<extractGroupData.gap\\\");;MBgetGroupInfo(SmallGroup(12,3));;quit;;\
+\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.787600847966254*^9, 3.787600848601199*^9}, {
+   3.78772665166817*^9, 3.7877266831274357`*^9}, 3.7877267659711313`*^9},
+ CellLabel->"In[3]:=",ExpressionUUID->"fc5e479a-db8b-441a-abdc-1152701536e6"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"ExitCode\"\>", "\[Rule]", "0"}], ",", 
+   RowBox[{"\<\"StandardOutput\"\>", 
+    "\[Rule]", "\<\"<function \\\"SmallGroup\\\">( <arguments> )\\n called \
+from read-eval loop at line 1 of *stdin*\\nyou can 'quit;' to quit to outer \
+loop, or\\nyou can 'return;' to continue\\n\"\>"}], ",", 
+   RowBox[{"\<\"StandardError\"\>", 
+    "\[Rule]", "\<\"Syntax error: warning: unbound global variable in \
+/home/lin/cdoering/.Mathemat\\\\\\nica/Applications/Discrete/extractGroupData.\
+gap line 12\\n   \
+\\t\\tAdd(reps,IrreducibleAffordingRepresentation(charTab[i]));;\\n   \\t\\t  \
+                                         ^\\nError, the Small Groups library \
+is required but not installed called from\\nbrk> \"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.7877267676352654`*^9, 3.78789998323135*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"9e32b45e-c350-4ffa-b7a5-1a57c4f268ed"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Group", "=", 
+   RowBox[{"MBloadGAPSmallGroup", "[", 
+    RowBox[{"12", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellLabel->"In[4]:=",ExpressionUUID->"9c7a1dbe-68b4-4094-b3fa-342393f416cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"starting GAP generating SmallGroup(12,3)...\"\>"], "Print",
+ CellChangeTimes->{
+  3.7857906441360397`*^9, 3.7857915495434713`*^9, 3.785792635829586*^9, 
+   3.785792810881309*^9, 3.787597230665737*^9, 3.787597902488573*^9, 
+   3.787597999060149*^9, 3.787598050422847*^9, 3.787598429133699*^9, 
+   3.787598470207889*^9, 3.78759850981341*^9, 3.7876011972690487`*^9, 
+   3.787601237606876*^9, 3.7876014585552*^9, {3.787602050764111*^9, 
+   3.787602070987338*^9}, 3.787602115559042*^9, 3.787603464198659*^9, 
+   3.787603496728558*^9, 3.787726772148494*^9, 3.787899983306039*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"d836410f-3e64-436c-823e-f677451f734e"],
+
+Cell[BoxData["\<\"...finished.\"\>"], "Print",
+ CellChangeTimes->{
+  3.7857906441360397`*^9, 3.7857915495434713`*^9, 3.785792635829586*^9, 
+   3.785792810881309*^9, 3.787597230665737*^9, 3.787597902488573*^9, 
+   3.787597999060149*^9, 3.787598050422847*^9, 3.787598429133699*^9, 
+   3.787598470207889*^9, 3.78759850981341*^9, 3.7876011972690487`*^9, 
+   3.787601237606876*^9, 3.7876014585552*^9, {3.787602050764111*^9, 
+   3.787602070987338*^9}, 3.787602115559042*^9, 3.787603464198659*^9, 
+   3.787603496728558*^9, 3.787726772148494*^9, 3.7878999845832033`*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"c348a518-edf2-498b-8c4a-04d103ccbfc3"]
+}, Open  ]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Read","readt",
+   "\"Invalid input found when reading \\!\\(\\*RowBox[{\\\"\\\\\\\"<function \
+\\\\\\\\\\\\\\\"SmallGroup\\\\\\\\\\\\\\\">( <arguments> )\\\\\\\\n\\\\\\\"\\\
+\"}]\\) from \\!\\(\\*RowBox[{\\\"StringToStream\\\", \\\"[\\\", \
+\\\"\\\\\\\"<function \\\\\\\\\\\\\\\"SmallGroup\\\\\\\\\\\\\\\">( \
+<arguments> )\\\\\\\\n called from read-eval loop at line 1 of \
+*stdin*\\\\\\\\nyou can 'quit;' to quit to outer loop, or\\\\\\\\nyou can \
+'return;' to continue\\\\\\\\n\\\\\\\"\\\", \\\"]\\\"}]\\).\"",2,4,1,
+   20540276853141649005,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.787899984611167*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"59781f9b-2a0a-4353-b273-4bf511802f6f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\nStructureDescription:\"\>", "\[InvisibleSpace]", "$Failed", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["\nStructureDescription:", $Failed, "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.7857906441360397`*^9, 3.7857915495434713`*^9, 3.785792635829586*^9, 
+   3.785792810881309*^9, 3.787597230665737*^9, 3.787597902488573*^9, 
+   3.787597999060149*^9, 3.787598050422847*^9, 3.787598429133699*^9, 
+   3.787598470207889*^9, 3.78759850981341*^9, 3.7876011972690487`*^9, 
+   3.787601237606876*^9, 3.7876014585552*^9, {3.787602050764111*^9, 
+   3.787602070987338*^9}, 3.787602115559042*^9, 3.787603464198659*^9, 
+   3.787603496728558*^9, 3.787726772148494*^9, 3.787899984651464*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"f903f676-280c-46a9-9975-6f2096dbf5a6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Read","readt",
+   "\"Invalid input found when reading \\!\\(\\*RowBox[{\\\"\\\\\\\" called \
+from read-eval loop at line 1 of *stdin*\\\\\\\\nyou can 'quit;' to quit to \
+outer loop, or\\\\\\\\n\\\\\\\"\\\"}]\\) from \
+\\!\\(\\*RowBox[{\\\"StringToStream\\\", \\\"[\\\", \\\"\\\\\\\"<function \
+\\\\\\\\\\\\\\\"SmallGroup\\\\\\\\\\\\\\\">( <arguments> )\\\\\\\\n called \
+from read-eval loop at line 1 of *stdin*\\\\\\\\nyou can 'quit;' to quit to \
+outer loop, or\\\\\\\\nyou can 'return;' to continue\\\\\\\\n\\\\\\\"\\\", \\\
+\"]\\\"}]\\).\"",2,4,2,20540276853141649005,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.787899984652535*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"0ea684a8-4520-4c72-907a-e6f43ea3ec0d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Size of Group:\"\>", "\[InvisibleSpace]", "$Failed", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Size of Group:", $Failed, "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.7857906441360397`*^9, 3.7857915495434713`*^9, 3.785792635829586*^9, 
+   3.785792810881309*^9, 3.787597230665737*^9, 3.787597902488573*^9, 
+   3.787597999060149*^9, 3.787598050422847*^9, 3.787598429133699*^9, 
+   3.787598470207889*^9, 3.78759850981341*^9, 3.7876011972690487`*^9, 
+   3.787601237606876*^9, 3.7876014585552*^9, {3.787602050764111*^9, 
+   3.787602070987338*^9}, 3.787602115559042*^9, 3.787603464198659*^9, 
+   3.787603496728558*^9, 3.787726772148494*^9, 3.7878999846581793`*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"bc1ce476-6faf-4376-82f3-bb38dc15221f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of irreps: \"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Number of irreps: ", 3, "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.7857906441360397`*^9, 3.7857915495434713`*^9, 3.785792635829586*^9, 
+   3.785792810881309*^9, 3.787597230665737*^9, 3.787597902488573*^9, 
+   3.787597999060149*^9, 3.787598050422847*^9, 3.787598429133699*^9, 
+   3.787598470207889*^9, 3.78759850981341*^9, 3.7876011972690487`*^9, 
+   3.787601237606876*^9, 3.7876014585552*^9, {3.787602050764111*^9, 
+   3.787602070987338*^9}, 3.787602115559042*^9, 3.787603464198659*^9, 
+   3.787603496728558*^9, 3.787726772148494*^9, 3.787899984659066*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"c1dc7937-b235-4f5a-91a2-5cd81dd1ee9d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Dimensions of irreps:\\n\"\>", "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"1", "2", "3"},
+      {
+       RowBox[{"continue", " ", "to", " ", 
+        SuperscriptBox["Null", "\[Prime]",
+         MultilineFunction->None]}], "\<\"\"\>", "\<\"\"\>"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    TableForm[{{1, 2, 3}, $CellContext`continue $CellContext`to 
+      Derivative[1][Null]}]], "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Dimensions of irreps:\n", 
+   TableForm[{{1, 2, 3}, $CellContext`continue $CellContext`to 
+     Derivative[1][Null]}], "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.7857906441360397`*^9, 3.7857915495434713`*^9, 3.785792635829586*^9, 
+   3.785792810881309*^9, 3.787597230665737*^9, 3.787597902488573*^9, 
+   3.787597999060149*^9, 3.787598050422847*^9, 3.787598429133699*^9, 
+   3.787598470207889*^9, 3.78759850981341*^9, 3.7876011972690487`*^9, 
+   3.787601237606876*^9, 3.7876014585552*^9, {3.787602050764111*^9, 
+   3.787602070987338*^9}, 3.787602115559042*^9, 3.787603464198659*^9, 
+   3.787603496728558*^9, 3.787726772148494*^9, 3.787899984661605*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"e662ae3c-6e69-4898-b92b-830d3e24c8c4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Character Table:\\n\"\>", "\[InvisibleSpace]", 
+   TagBox["EndOfFile",
+    Function[BoxForm`e$, 
+     TableForm[BoxForm`e$]]], "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Character Table:\n", 
+   TableForm[EndOfFile], "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.7857906441360397`*^9, 3.7857915495434713`*^9, 3.785792635829586*^9, 
+   3.785792810881309*^9, 3.787597230665737*^9, 3.787597902488573*^9, 
+   3.787597999060149*^9, 3.787598050422847*^9, 3.787598429133699*^9, 
+   3.787598470207889*^9, 3.78759850981341*^9, 3.7876011972690487`*^9, 
+   3.787601237606876*^9, 3.7876014585552*^9, {3.787602050764111*^9, 
+   3.787602070987338*^9}, 3.787602115559042*^9, 3.787603464198659*^9, 
+   3.787603496728558*^9, 3.787726772148494*^9, 3.7878999846626596`*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"bc90c884-31a5-4942-9ada-e876b8600b9d"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1278, 1028},
+WindowMargins->{{Automatic, 1}, {0, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 192, 4, 31, "Input",ExpressionUUID->"92c1365b-a8fa-40b1-82c5-00c223cc3243"],
+Cell[CellGroupData[{
+Cell[775, 28, 480, 11, 31, "Input",ExpressionUUID->"658607f8-2293-4387-ab43-9ddecd82c199"],
+Cell[1258, 41, 565, 12, 82, "Output",ExpressionUUID->"59313c66-cf0c-4fff-8652-3ffce0e55e38"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1860, 58, 581, 13, 31, "Input",ExpressionUUID->"fc5e479a-db8b-441a-abdc-1152701536e6"],
+Cell[2444, 73, 971, 17, 243, "Output",ExpressionUUID->"9e32b45e-c350-4ffa-b7a5-1a57c4f268ed"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3452, 95, 222, 5, 31, "Input",ExpressionUUID->"9c7a1dbe-68b4-4094-b3fa-342393f416cb"],
+Cell[CellGroupData[{
+Cell[3699, 104, 695, 11, 25, "Print",ExpressionUUID->"d836410f-3e64-436c-823e-f677451f734e"],
+Cell[4397, 117, 666, 11, 25, "Print",ExpressionUUID->"c348a518-edf2-498b-8c4a-04d103ccbfc3"]
+}, Open  ]],
+Cell[5078, 131, 773, 15, 119, "Message",ExpressionUUID->"59781f9b-2a0a-4353-b273-4bf511802f6f"],
+Cell[5854, 148, 859, 16, 70, "Print",ExpressionUUID->"f903f676-280c-46a9-9975-6f2096dbf5a6"],
+Cell[6716, 166, 801, 15, 138, "Message",ExpressionUUID->"0ea684a8-4520-4c72-907a-e6f43ea3ec0d"],
+Cell[CellGroupData[{
+Cell[7542, 185, 842, 16, 48, "Print",ExpressionUUID->"bc1ce476-6faf-4376-82f3-bb38dc15221f"],
+Cell[8387, 203, 836, 16, 48, "Print",ExpressionUUID->"c1dc7937-b235-4f5a-91a2-5cd81dd1ee9d"],
+Cell[9226, 221, 1560, 34, 86, "Print",ExpressionUUID->"e662ae3c-6e69-4898-b92b-830d3e24c8c4"],
+Cell[10789, 257, 933, 19, 70, "Print",ExpressionUUID->"bc90c884-31a5-4942-9ada-e876b8600b9d"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

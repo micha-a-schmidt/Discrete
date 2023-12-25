@@ -1,0 +1,329 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7811,        320]
+NotebookOptionsPosition[      5194,        223]
+NotebookOutlinePosition[      5630,        240]
+CellTagsIndexPosition[      5587,        237]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["Discrete", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["Discrete`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["Discrete/ref/MBconvertGAPToMathematica", "Categorization",
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["MBconvertGAPToMathematica", "ObjectName",
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData[
+  RowBox[{"MBconvertGAPToMathematica", "[", "String", "]"}]], "InlineFormula"],
+ " \[LineSeparator]MBconvertGAPToMathematica is a rudementary function to \
+convert GAP output given in String to ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " InputForm. "
+}], "Usage",
+ CellChangeTimes->{{3.52694713127639*^9, 3.5269471994449463`*^9}, {
+  3.526949287394669*^9, 3.5269492879037237`*^9}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Discrete`ModelBuildingTools`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5269472571625347`*^9, 3.526947267610165*^9}},
+ CellLabel->"In[7]:=",
+ CellID->54514590],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MBconvertGAPToMathematica", "[", "\"\<[[1,E(5)],[2+E(3),-4]]\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5269492434411573`*^9, 3.5269492765200233`*^9}},
+ CellLabel->"In[8]:=",
+ CellID->592905897],
+
+Cell[BoxData["\<\"{{1,Exp[2*Pi*I/5]},{2+Exp[2*Pi*I/3],-4}}\"\>"], "Output",
+ CellChangeTimes->{3.526949277347921*^9},
+ CellLabel->"Out[8]=",
+ CellID->59876931]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->1908401893],
+
+Cell[TextData[{
+ "See ",
+ ButtonBox["TutorialA4.nb",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{
+      ParentDirectory[
+       ParentDirectory[]], "Tutorials"}, "Tutorial A4.nb", CharacterEncoding -> 
+     "UTF-8"], None}],
+ " for an example notebook."
+}], "Tutorials",
+ CellChangeTimes->{{3.526851147922578*^9, 3.526851220016498*^9}},
+ CellID->1440733233]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[ButtonBox["MBconvertMathematicaToGAP",
+ BaseStyle->"Hyperlink",
+ ButtonData->{"MBconvertMathematicaToGAP.nb", None}]], "SeeAlso",
+ CellChangeTimes->{{3.52694721998643*^9, 3.5269472334334908`*^9}, {
+  3.526947466468658*^9, 3.526947469140765*^9}, {3.5269475373654547`*^9, 
+  3.526947550491366*^9}, {3.5269492361759*^9, 3.5269492367584248`*^9}},
+ CellID->929782353]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{-5, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[907, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[978, 41, 79, 2, 70, "Categorization",
+ CellID->686433507],
+Cell[1060, 45, 81, 2, 70, "Categorization",
+ CellID->605800465],
+Cell[1144, 49, 78, 2, 70, "Categorization",
+ CellID->468444828],
+Cell[1225, 53, 83, 1, 70, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1345, 59, 55, 1, 19, "KeywordsSection",
+ CellID->477174294],
+Cell[1403, 62, 45, 1, 70, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1485, 68, 65, 1, 19, "TemplatesSection",
+ CellID->1872225408],
+Cell[1553, 71, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1650, 75, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1735, 79, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[1819, 83, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1938, 90, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1994, 93, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2060, 97, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2132, 101, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2199, 105, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2271, 109, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2335, 113, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2399, 117, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2465, 121, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2546, 125, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2650, 132, 68, 1, 62, "ObjectName",
+ CellID->1224892054],
+Cell[2721, 135, 468, 12, 92, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3226, 152, 356, 11, 69, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[3585, 165, 224, 6, 26, "Input",
+ CellID->54514590],
+Cell[CellGroupData[{
+Cell[3834, 175, 223, 5, 26, "Input",
+ CellID->592905897],
+Cell[4060, 182, 159, 3, 25, "Output",
+ CellID->59876931]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4268, 191, 58, 1, 43, "TutorialsSection",
+ CellID->1908401893],
+Cell[4329, 194, 378, 12, 16, "Tutorials",
+ CellID->1440733233]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4744, 211, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[4802, 214, 376, 6, 16, "SeeAlso",
+ CellID->929782353]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

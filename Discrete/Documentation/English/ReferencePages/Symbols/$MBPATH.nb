@@ -1,0 +1,254 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5697,        245]
+NotebookOptionsPosition[      3556,        166]
+NotebookOutlinePosition[      3992,        183]
+CellTagsIndexPosition[      3949,        180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["0.0", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["Discrete", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["Discrete`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["Discrete/ref/$MBPATH", "Categorization",
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["$MBPATH", "ObjectName",
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData["$MBPATH"], "InlineFormula"],
+ " \[LineSeparator]$MBPATH contains the path to the package \"Discrete\". It \
+is automatically generated, when the package is loaded and should be changed, \
+unless you know what you are doing."
+}], "Usage",
+ CellChangeTimes->{{3.526946622236719*^9, 3.526946711905693*^9}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->1908401893],
+
+Cell[TextData[{
+ "See ",
+ ButtonBox["TutorialA4.nb",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{
+      ParentDirectory[
+       ParentDirectory[]], "Tutorials"}, "Tutorial A4.nb", CharacterEncoding -> 
+     "UTF-8"], None}],
+ " for an example notebook."
+}], "Tutorials",
+ CellChangeTimes->{{3.526851147922578*^9, 3.526851220016498*^9}},
+ CellID->1440733233]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[907, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[978, 41, 79, 2, 70, "Categorization",
+ CellID->686433507],
+Cell[1060, 45, 81, 2, 70, "Categorization",
+ CellID->605800465],
+Cell[1144, 49, 78, 2, 70, "Categorization",
+ CellID->468444828],
+Cell[1225, 53, 65, 1, 70, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1327, 59, 55, 1, 19, "KeywordsSection",
+ CellID->477174294],
+Cell[1385, 62, 45, 1, 70, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1467, 68, 65, 1, 19, "TemplatesSection",
+ CellID->1872225408],
+Cell[1535, 71, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1632, 75, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1717, 79, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[1801, 83, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1920, 90, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1976, 93, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2042, 97, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2114, 101, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2181, 105, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2253, 109, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2317, 113, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2381, 117, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2447, 121, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2528, 125, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2632, 132, 50, 1, 62, "ObjectName",
+ CellID->1224892054],
+Cell[2685, 135, 379, 8, 92, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3101, 148, 58, 1, 43, "TutorialsSection",
+ CellID->1908401893],
+Cell[3162, 151, 378, 12, 16, "Tutorials",
+ CellID->1440733233]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

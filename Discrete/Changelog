@@ -1,0 +1,32 @@
+* Discrete 1.1.5
+* 2023-10-18
+	- Added debugging code.
+	- fixed bug in MBconvertMathematicaToGAP function: square roots and ratios
+	were not correctly converted (thanks to Christian Doering for pointing it out.)
+	- automatically remove warning messages at the beginning of GAP output in	readGAP function. 
+
+
+* Discrete 1.1.4
+* 2021-06-09
+	- The code using ValueQ stopped working in Mathematica 12.2. Rewrote code to be able to use Mathematica versions >= 12.2 .
+
+
+* Discrete 1.1.3
+* 2020-01-26
+	- fixed bug in MBconvertMathematicaToGAP function (thanks to Christian Doering for pointing it out)
+
+* Discrete 1.1.2
+* 2020-01-10
+	- rewrite of interface to gap to avoid temporary files
+
+
+* Discrete 1.1.1
+* 2016-06-23
+	- added option to keep temporary files
+	- print exit code of gap	
+* Discrete 1.1
+* 2016-05-11
+	- simplify character table
+	- fixed bug in Clebsch-Gordan coefficient algorithm: CGCUnitary
+
+* Discrete 1.0

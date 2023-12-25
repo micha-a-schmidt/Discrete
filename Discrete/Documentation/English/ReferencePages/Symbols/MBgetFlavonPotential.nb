@@ -1,0 +1,776 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     22444,        767]
+NotebookOptionsPosition[     18005,        602]
+NotebookOutlinePosition[     18441,        619]
+CellTagsIndexPosition[     18398,        616]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["ModelBuilding", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["ModelBuilding`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["ModelBuilding/ref/MBgetInvariants", "Categorization",
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["MBgetFlavonPotential", "ObjectName",
+ CellChangeTimes->{{3.52719336591829*^9, 3.527193368144515*^9}},
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData[
+  RowBox[{"MBgetFlavonPotential", "[", 
+   RowBox[{"Group", ",", "Reps", ",", "Order", ",", "Head"}], "]"}]], 
+  "InlineFormula"],
+ " \[LineSeparator]MBgetFlavonPotential returns the flavon potential formed \
+by Reps up to order Order using the Clebsch Gordan coefficients of Group. The \
+prefix of the couplings is Head. ",
+ "In each step, MBgetCovariants applies ",
+ ButtonBox["MBsimplifyCovariants",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"MBsimplifyCovariants.nb", None}],
+ " to reduce the number of operators to a minimal independent set."
+}], "Usage",
+ CellChangeTimes->{{3.526864995589712*^9, 3.526865004992502*^9}, {
+  3.526865086918709*^9, 3.526865106766964*^9}, {3.5271933704616117`*^9, 
+  3.52719340602709*^9}, {3.527566768034419*^9, 3.527566768440207*^9}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Discrete`ModelBuildingTools`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.526851363185132*^9, 3.526851388451866*^9}, {
+  3.526941495047418*^9, 3.5269415029581423`*^9}},
+ CellLabel->"In[1]:=",
+ CellID->323990969],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A4", "=", 
+   RowBox[{"MBloadGAPGroup", "[", "\"\<AlternatingGroup(4)\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5268514020126867`*^9, 3.526851403516307*^9}},
+ CellLabel->"In[2]:=",
+ CellID->2070045828],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"starting GAP generating AlternatingGroup(4)...\"\>"], \
+"Print",
+ CellChangeTimes->{3.526865118098558*^9, 3.5271936493209543`*^9, 
+  3.52719397320674*^9, 3.5271940080350733`*^9, 3.527194323936171*^9},
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->1353426890],
+
+Cell[BoxData["\<\"...finished\"\>"], "Print",
+ CellChangeTimes->{3.526865118098558*^9, 3.5271936493209543`*^9, 
+  3.52719397320674*^9, 3.5271940080350733`*^9, 3.527194324967291*^9},
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->1376339118],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\nStructureDescription:\"\>", 
+   "\[InvisibleSpace]", "\<\"A4\"\>", "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["\nStructureDescription:", "A4", "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.526865118098558*^9, 3.5271936493209543`*^9, 
+  3.52719397320674*^9, 3.5271940080350733`*^9, 3.5271943249990396`*^9},
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->1838838474],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Size of Group:\"\>", "\[InvisibleSpace]", "12", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Size of Group:", 12, "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.526865118098558*^9, 3.5271936493209543`*^9, 
+  3.52719397320674*^9, 3.5271940080350733`*^9, 3.5271943250016193`*^9},
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->146324191],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of irreps: \"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Number of irreps: ", 4, "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.526865118098558*^9, 3.5271936493209543`*^9, 
+  3.52719397320674*^9, 3.5271940080350733`*^9, 3.527194325003014*^9},
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->800363985],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Dimensions of irreps:\\n\"\>", "\[InvisibleSpace]", 
+   TagBox[GridBox[{
+      {"1", "2", "3", "4"},
+      {"1", "1", "1", "3"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Function[BoxForm`e$, 
+     TableForm[BoxForm`e$]]], "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Dimensions of irreps:\n", 
+   TableForm[{{1, 2, 3, 4}, {1, 1, 1, 3}}], "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.526865118098558*^9, 3.5271936493209543`*^9, 
+  3.52719397320674*^9, 3.5271940080350733`*^9, 3.527194325004772*^9},
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->1621606042],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Character Table:\\n\"\>", "\[InvisibleSpace]", 
+   TagBox[GridBox[{
+      {"1", "1", "1", "1"},
+      {"1", "1", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "3"]}]], 
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "3"]]},
+      {"1", "1", 
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "3"]], 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "3"]}]]},
+      {"3", 
+       RowBox[{"-", "1"}], "0", "0"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Function[BoxForm`e$, 
+     TableForm[BoxForm`e$]]], "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Character Table:\n", 
+   TableForm[{{1, 1, 1, 1}, {1, 1, E^(Complex[0, 
+         Rational[-2, 3]] Pi), E^(Complex[0, 
+         Rational[2, 3]] Pi)}, {1, 1, E^(Complex[0, 
+         Rational[2, 3]] Pi), E^(Complex[0, 
+         Rational[-2, 3]] Pi)}, {3, -1, 0, 0}}], "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.526865118098558*^9, 3.5271936493209543`*^9, 
+  3.52719397320674*^9, 3.5271940080350733`*^9, 3.52719432500651*^9},
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->574825755]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Chi]", "=", 
+  RowBox[{"MBgetRepVector", "[", 
+   RowBox[{"A4", ",", "4", ",", "\[Chi]c"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.522070058352837*^9, 3.522070073412291*^9}, {
+  3.522070224150367*^9, 3.522070266420216*^9}, {3.524573628409586*^9, 
+  3.5245736311651487`*^9}, {3.524573667533764*^9, 3.524573687408367*^9}, {
+  3.526864863358789*^9, 3.5268648778777037`*^9}},
+ CellLabel->"In[3]:=",
+ CellID->733653939],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"\[Chi]c1", ",", "\[Chi]c2", ",", "\[Chi]c3"}], "}"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.526865119510521*^9, 3.527193652572322*^9, 
+  3.527193976440378*^9, 3.5271940093384323`*^9, 3.527194325190673*^9},
+ CellLabel->"Out[3]=",
+ CellID->2026504309]
+}, Open  ]],
+
+Cell["\<\
+Generally, MBgetFlavonPotential returns the most general flavon potential \
+assuming all fields are complex.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.527194038587386*^9, 3.527194072155856*^9}, 
+   3.527194104075533*^9},
+ CellID->1837233218],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$Assumptions"], "Input",
+ CellChangeTimes->{{3.5271939817093573`*^9, 3.527193983516678*^9}},
+ CellLabel->"In[4]:=",
+ CellID->1880393594],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.527193985130846*^9, 3.527194009534813*^9}, 
+   3.527194325249588*^9},
+ CellLabel->"Out[4]=",
+ CellID->144275612]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MBgetFlavonPotential", "[", 
+  RowBox[{"A4", ",", "\[Chi]", ",", "3", ",", "\[Lambda]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5220706088314943`*^9, 3.52207062114093*^9}, {
+  3.524573874882658*^9, 3.524573880202903*^9}, {3.526864881137906*^9, 
+  3.526864883282157*^9}, {3.526865058300668*^9, 3.526865068197514*^9}, {
+  3.527193655396351*^9, 3.527193660005028*^9}},
+ CellLabel->"In[5]:=",
+ CellID->783630378],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["2"], "Print",
+ CellChangeTimes->{
+  3.5268651198205967`*^9, {3.5271936606637697`*^9, 3.5271936834493227`*^9}, {
+   3.52719399524865*^9, 3.527194009600045*^9}, 3.527194325307068*^9},
+ CellLabel->"During evaluation of In[5]:=",
+ CellID->1950239736],
+
+Cell[BoxData["3"], "Print",
+ CellChangeTimes->{
+  3.5268651198205967`*^9, {3.5271936606637697`*^9, 3.5271936834493227`*^9}, {
+   3.52719399524865*^9, 3.527194009600045*^9}, 3.527194325563261*^9},
+ CellLabel->"During evaluation of In[5]:=",
+ CellID->214298282]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[ImaginaryI]", " ", "i\[Lambda]3n1"}], "+", "r\[Lambda]3n1"}], 
+    ")"}], " ", "\[Chi]c1", " ", "\[Chi]c2", " ", "\[Chi]c3"}], "+", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["3"]], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[ImaginaryI]", " ", "i\[Lambda]2n1"}], "+", 
+        "r\[Lambda]2n1"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["\[Chi]c1", "2"], "+", 
+        SuperscriptBox["\[Chi]c2", "2"], "+", 
+        SuperscriptBox["\[Chi]c3", "2"]}], ")"}]}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "\[ImaginaryI]"}], " ", "i\[Lambda]2n1"}], "+", 
+        "r\[Lambda]2n1"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Conjugate", "[", "\[Chi]c1", "]"}], "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"Conjugate", "[", "\[Chi]c2", "]"}], "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"Conjugate", "[", "\[Chi]c3", "]"}], "2"]}], ")"}]}]}], 
+    ")"}]}], "+", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "i\[Lambda]3n1"}], "+", 
+     "r\[Lambda]3n1"}], ")"}], " ", 
+   RowBox[{"Conjugate", "[", 
+    RowBox[{"\[Chi]c1", " ", "\[Chi]c2", " ", "\[Chi]c3"}], 
+    "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.5268651203094387`*^9, {3.527193661142333*^9, 3.527193683614943*^9}, {
+   3.527193995508483*^9, 3.5271940100858173`*^9}, 3.5271943257620487`*^9},
+ CellLabel->"Out[5]=",
+ CellID->100988534]
+}, Open  ]],
+
+Cell["\<\
+Therefore, it is good to explicitly add a declaration to the variable \
+$Assumptions, if they are real.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.527194038587386*^9, 3.527194072155856*^9}, {
+  3.527194104075533*^9, 3.527194230844153*^9}},
+ CellID->943591532],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$Assumptions", "=", 
+  RowBox[{
+   RowBox[{"Variables", "[", "\[Chi]", "]"}], "\[Element]", " ", 
+   "Reals"}]}]], "Input",
+ CellChangeTimes->{{3.527193671033039*^9, 3.5271936819725523`*^9}},
+ CellLabel->"In[6]:=",
+ CellID->1905502140],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"\[Chi]c1", "|", "\[Chi]c2", "|", "\[Chi]c3"}], ")"}], 
+  "\[Element]", "Reals"}]], "Output",
+ CellChangeTimes->{
+  3.5271936824566717`*^9, {3.5271939966846933`*^9, 3.527194010210215*^9}, 
+   3.52719432582181*^9},
+ CellLabel->"Out[6]=",
+ CellID->949669179]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MBgetFlavonPotential", "[", 
+  RowBox[{"A4", ",", "\[Chi]", ",", "3", ",", "\[Lambda]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5220706088314943`*^9, 3.52207062114093*^9}, {
+  3.524573874882658*^9, 3.524573880202903*^9}, {3.526864881137906*^9, 
+  3.526864883282157*^9}, {3.526865058300668*^9, 3.526865068197514*^9}, {
+  3.527193655396351*^9, 3.527193660005028*^9}},
+ CellLabel->"In[7]:=",
+ CellID->2014319392],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["2"], "Print",
+ CellChangeTimes->{
+  3.5268651198205967`*^9, {3.5271936606637697`*^9, 3.5271936834493227`*^9}, {
+   3.527193997620636*^9, 3.527194010363431*^9}, 3.527194325890212*^9},
+ CellLabel->"During evaluation of In[7]:=",
+ CellID->169051649],
+
+Cell[BoxData["3"], "Print",
+ CellChangeTimes->{
+  3.5268651198205967`*^9, {3.5271936606637697`*^9, 3.5271936834493227`*^9}, {
+   3.527193997620636*^9, 3.527194010363431*^9}, 3.527194325936899*^9},
+ CellLabel->"During evaluation of In[7]:=",
+ CellID->2000749286]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Lambda]3n1", " ", "\[Chi]c1", " ", "\[Chi]c2", " ", "\[Chi]c3"}],
+   "+", 
+  FractionBox[
+   RowBox[{"\[Lambda]2n1", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["\[Chi]c1", "2"], "+", 
+      SuperscriptBox["\[Chi]c2", "2"], "+", 
+      SuperscriptBox["\[Chi]c3", "2"]}], ")"}]}], 
+   SqrtBox["3"]]}]], "Output",
+ CellChangeTimes->{
+  3.5268651203094387`*^9, {3.527193661142333*^9, 3.527193683614943*^9}, {
+   3.527193997673503*^9, 3.5271940105246964`*^9}, 3.527194326045848*^9},
+ CellLabel->"Out[7]=",
+ CellID->1058151153]
+}, Open  ]],
+
+Cell["\<\
+All couplings, which are defined within MBgetFlavonPotential, are real and \
+automatically added to $Assumptions.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.527194038587386*^9, 3.527194072155856*^9}, {
+  3.527194104075533*^9, 3.527194230844153*^9}, {3.527194265685381*^9, 
+  3.5271943132058487`*^9}},
+ CellID->1969676816],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$Assumptions"], "Input",
+ CellChangeTimes->{{3.527193735113161*^9, 3.527193736720478*^9}},
+ CellLabel->"In[8]:=",
+ CellID->1897714100],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"\[Chi]c1", "|", "\[Chi]c2", "|", "\[Chi]c3"}], ")"}], 
+   "\[Element]", "Reals"}], "&&", 
+  RowBox[{"\[Lambda]2n1", "\[Element]", "Reals"}], "&&", 
+  RowBox[{"\[Lambda]3n1", "\[Element]", "Reals"}]}]], "Output",
+ CellChangeTimes->{
+  3.527193737327352*^9, {3.527193998794187*^9, 3.5271940105715933`*^9}, 
+   3.527194326102433*^9},
+ CellLabel->"Out[8]=",
+ CellID->925585564]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->1908401893],
+
+Cell[TextData[{
+ "See ",
+ ButtonBox["TutorialA4.nb",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{
+      ParentDirectory[
+       ParentDirectory[]], "Tutorials"}, "Tutorial A4.nb", CharacterEncoding -> 
+     "UTF-8"], None}],
+ " for an example notebook."
+}], "Tutorials",
+ CellChangeTimes->{{3.526851147922578*^9, 3.526851220016498*^9}},
+ CellID->1440733233]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ ButtonBox["MBgetCovariants",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"MBgetCovariants.nb", None}],
+ ButtonBox[", ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"MBgetFlavonPotential.nb", None}],
+ ButtonBox["MBsimplifyCovariants",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"MBsimplifyCovariants.nb", None}]
+}], "SeeAlso",
+ CellChangeTimes->{{3.526865028357737*^9, 3.526865040037582*^9}, 
+   3.5275667456600027`*^9},
+ CellID->929782353]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[907, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[978, 41, 79, 2, 70, "Categorization",
+ CellID->686433507],
+Cell[1060, 45, 86, 2, 70, "Categorization",
+ CellID->605800465],
+Cell[1149, 49, 83, 2, 70, "Categorization",
+ CellID->468444828],
+Cell[1235, 53, 78, 1, 70, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1350, 59, 55, 1, 19, "KeywordsSection",
+ CellID->477174294],
+Cell[1408, 62, 45, 1, 70, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1490, 68, 65, 1, 19, "TemplatesSection",
+ CellID->1872225408],
+Cell[1558, 71, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1655, 75, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1740, 79, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[1824, 83, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1943, 90, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1999, 93, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2065, 97, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2137, 101, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2204, 105, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2276, 109, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2340, 113, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2404, 117, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2470, 121, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2551, 125, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2655, 132, 128, 2, 62, "ObjectName",
+ CellID->1224892054],
+Cell[2786, 136, 846, 18, 126, "Usage",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3669, 159, 356, 11, 69, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[4028, 172, 274, 7, 26, "Input",
+ CellID->323990969],
+Cell[CellGroupData[{
+Cell[4327, 183, 251, 7, 26, "Input",
+ CellID->2070045828],
+Cell[CellGroupData[{
+Cell[4603, 194, 283, 5, 21, "Print",
+ CellID->1353426890],
+Cell[4889, 201, 246, 4, 21, "Print",
+ CellID->1376339118],
+Cell[5138, 207, 444, 9, 60, "Print",
+ CellID->1838838474],
+Cell[5585, 218, 414, 9, 41, "Print",
+ CellID->146324191],
+Cell[6002, 229, 418, 9, 41, "Print",
+ CellID->800363985],
+Cell[6423, 240, 1026, 25, 76, "Print",
+ CellID->1621606042],
+Cell[7452, 267, 1848, 46, 140, "Print",
+ CellID->574825755]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9349, 319, 442, 9, 26, "Input",
+ CellID->733653939],
+Cell[9794, 330, 438, 13, 25, "Output",
+ CellID->2026504309]
+}, Open  ]],
+Cell[10247, 346, 252, 6, 35, "ExampleText",
+ CellID->1837233218],
+Cell[CellGroupData[{
+Cell[10524, 356, 150, 3, 26, "Input",
+ CellID->1880393594],
+Cell[10677, 361, 166, 4, 25, "Output",
+ CellID->144275612]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10880, 370, 433, 8, 26, "Input",
+ CellID->783630378],
+Cell[CellGroupData[{
+Cell[11338, 382, 260, 5, 21, "Print",
+ CellID->1950239736],
+Cell[11601, 389, 259, 5, 21, "Print",
+ CellID->214298282]
+}, Open  ]],
+Cell[11875, 397, 1636, 50, 110, "Output",
+ CellID->100988534]
+}, Open  ]],
+Cell[13526, 450, 269, 6, 21, "ExampleText",
+ CellID->943591532],
+Cell[CellGroupData[{
+Cell[13820, 460, 259, 7, 26, "Input",
+ CellID->1905502140],
+Cell[14082, 469, 307, 9, 28, "Output",
+ CellID->949669179]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14426, 483, 434, 8, 26, "Input",
+ CellID->2014319392],
+Cell[CellGroupData[{
+Cell[14885, 495, 260, 5, 21, "Print",
+ CellID->169051649],
+Cell[15148, 502, 261, 5, 21, "Print",
+ CellID->2000749286]
+}, Open  ]],
+Cell[15424, 510, 574, 16, 52, "Output",
+ CellID->1058151153]
+}, Open  ]],
+Cell[16013, 529, 331, 7, 35, "ExampleText",
+ CellID->1969676816],
+Cell[CellGroupData[{
+Cell[16369, 540, 148, 3, 26, "Input",
+ CellID->1897714100],
+Cell[16520, 545, 438, 12, 28, "Output",
+ CellID->925585564]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17007, 563, 58, 1, 43, "TutorialsSection",
+ CellID->1908401893],
+Cell[17068, 566, 378, 12, 16, "Tutorials",
+ CellID->1440733233]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17483, 583, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[17541, 586, 448, 13, 16, "SeeAlso",
+ CellID->929782353]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

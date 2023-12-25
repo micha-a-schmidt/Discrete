@@ -1,0 +1,545 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15124,        536]
+NotebookOptionsPosition[     11753,        411]
+NotebookOutlinePosition[     12189,        428]
+CellTagsIndexPosition[     12146,        425]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.0", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["ModelBuilding", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["ModelBuilding`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["ModelBuilding/ref/MBisUnitaryRep", "Categorization",
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["MBisUnitaryRep", "ObjectName",
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData[
+  RowBox[{"MBisUnitaryRep", "[", 
+   RowBox[{"Group", ",", "RepNumber"}], "]"}]], "InlineFormula"],
+ " \[LineSeparator]MBisUnitaryRep checks whether the irreducible \
+representation RepNumber of the finite group Group is unitary."
+}], "Usage",
+ CellChangeTimes->{{3.5268520798012733`*^9, 3.526852117774735*^9}},
+ CellID->982511436],
+
+Cell["\<\
+Of course the representations of a finite group can always be chosen to be \
+unitary, but they are not necessarily.\
+\>", "Notes",
+ CellChangeTimes->{{3.526852130311521*^9, 3.5268521322003183`*^9}},
+ CellID->1067943069]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Discrete`ModelBuildingTools`\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.526851363185132*^9, 3.526851388451866*^9}, {
+  3.526941636059245*^9, 3.526941644015901*^9}},
+ CellLabel->"In[0]:=",
+ CellID->323990969],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A5", "=", 
+   RowBox[{"MBloadGAPGroup", "[", "\"\<AlternatingGroup(5)\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5268514020126867`*^9, 3.526851403516307*^9}, {
+  3.526851440110422*^9, 3.526851442245318*^9}},
+ CellLabel->"In[1]:=",
+ CellID->805278218],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"starting GAP generating AlternatingGroup(5)...\"\>"], \
+"Print",
+ CellChangeTimes->{{3.5268514072072277`*^9, 3.5268514430432673`*^9}, {
+  3.526852209325779*^9, 3.526852227486506*^9}},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->695600406],
+
+Cell[BoxData["\<\"...finished\"\>"], "Print",
+ CellChangeTimes->{{3.5268514072072277`*^9, 3.5268514430432673`*^9}, {
+  3.526852209325779*^9, 3.526852229059848*^9}},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->8143766],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\nStructureDescription:\"\>", 
+   "\[InvisibleSpace]", "\<\"A5\"\>", "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["\nStructureDescription:", "A5", "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.5268514072072277`*^9, 3.5268514430432673`*^9}, {
+  3.526852209325779*^9, 3.526852229079536*^9}},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->1398001158],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Size of Group:\"\>", "\[InvisibleSpace]", "60", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Size of Group:", 60, "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.5268514072072277`*^9, 3.5268514430432673`*^9}, {
+  3.526852209325779*^9, 3.526852229080792*^9}},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->210054166],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of irreps: \"\>", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Number of irreps: ", 5, "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.5268514072072277`*^9, 3.5268514430432673`*^9}, {
+  3.526852209325779*^9, 3.526852229081949*^9}},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->1074852716],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Dimensions of irreps:\\n\"\>", "\[InvisibleSpace]", 
+   TagBox[GridBox[{
+      {"1", "2", "3", "4", "5"},
+      {"1", "3", "3", "4", "5"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Function[BoxForm`e$, 
+     TableForm[BoxForm`e$]]], "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Dimensions of irreps:\n", 
+   TableForm[{{1, 2, 3, 4, 5}, {1, 3, 3, 4, 5}}], "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.5268514072072277`*^9, 3.5268514430432673`*^9}, {
+  3.526852209325779*^9, 3.526852229083403*^9}},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->1200795311],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Character Table:\\n\"\>", "\[InvisibleSpace]", 
+   TagBox[GridBox[{
+      {"1", "1", "1", "1", "1"},
+      {"3", 
+       RowBox[{"-", "1"}], "0", 
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]}]]}], "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]]}], 
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]}]]}], "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]]}]},
+      {"3", 
+       RowBox[{"-", "1"}], "0", 
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]}]]}], "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]]}], 
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]}]]}], "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]"}], "5"]]}]},
+      {"4", "0", "1", 
+       RowBox[{"-", "1"}], 
+       RowBox[{"-", "1"}]},
+      {"5", "1", 
+       RowBox[{"-", "1"}], "0", "0"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Function[BoxForm`e$, 
+     TableForm[BoxForm`e$]]], "\[InvisibleSpace]", "\<\"\\n\"\>"}],
+  SequenceForm["Character Table:\n", 
+   TableForm[{{1, 1, 1, 1, 1}, {3, -1, 0, -E^(Complex[0, 
+           Rational[-2, 5]] Pi) - E^(Complex[0, 
+         Rational[2, 5]] Pi), -E^(Complex[0, 
+           Rational[-4, 5]] Pi) - E^(Complex[0, 
+         Rational[4, 5]] Pi)}, {3, -1, 0, -E^(Complex[0, 
+           Rational[-4, 5]] Pi) - E^(Complex[0, 
+         Rational[4, 5]] Pi), -E^(Complex[0, 
+           Rational[-2, 5]] Pi) - E^(Complex[0, 
+         Rational[2, 5]] Pi)}, {4, 0, 1, -1, -1}, {5, 1, -1, 0, 0}}], "\n"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.5268514072072277`*^9, 3.5268514430432673`*^9}, {
+  3.526852209325779*^9, 3.526852229085704*^9}},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->1790053224]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MBisUnitaryRep", "[", 
+  RowBox[{"A5", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.526851410656075*^9, 3.526851446801791*^9}, {
+  3.5268522130609703`*^9, 3.526852215174355*^9}},
+ CellLabel->"In[2]:=",
+ CellID->1760106952],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.526851427509502*^9, 3.5268514488619328`*^9}, 
+   3.526852230122068*^9},
+ CellLabel->"Out[2]=",
+ CellID->326527818]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MBisUnitaryRep", "[", 
+  RowBox[{"A5", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5268522371579437`*^9, 3.5268522372537203`*^9}},
+ CellLabel->"In[3]:=",
+ CellID->52297809],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.526852239196411*^9},
+ CellLabel->"Out[3]=",
+ CellID->1830365199]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->250839057],
+
+Cell[TextData[{
+ "See ",
+ ButtonBox["TutorialA4.nb",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{
+      ParentDirectory[
+       ParentDirectory[]], "Tutorials"}, "Tutorial A4.nb", CharacterEncoding -> 
+     "UTF-8"], None}],
+ " for an example notebook."
+}], "Tutorials",
+ CellChangeTimes->{{3.526852138870805*^9, 3.526852139640601*^9}},
+ CellID->341631938]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[ButtonBox["MBisUnitary",
+ BaseStyle->"Hyperlink",
+ ButtonData->{"MBisUnitary.nb", None}]], "SeeAlso",
+ CellChangeTimes->{{3.52685217422311*^9, 3.526852189116926*^9}},
+ CellID->929782353]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[907, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[978, 41, 79, 2, 70, "Categorization",
+ CellID->686433507],
+Cell[1060, 45, 86, 2, 70, "Categorization",
+ CellID->605800465],
+Cell[1149, 49, 83, 2, 70, "Categorization",
+ CellID->468444828],
+Cell[1235, 53, 77, 1, 70, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1349, 59, 55, 1, 19, "KeywordsSection",
+ CellID->477174294],
+Cell[1407, 62, 45, 1, 70, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1489, 68, 65, 1, 19, "TemplatesSection",
+ CellID->1872225408],
+Cell[1557, 71, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1654, 75, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1739, 79, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[1823, 83, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1942, 90, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1998, 93, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2064, 97, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2136, 101, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2203, 105, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2275, 109, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2339, 113, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2403, 117, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2469, 121, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2550, 125, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2654, 132, 57, 1, 62, "ObjectName",
+ CellID->1224892054],
+Cell[2714, 135, 387, 9, 92, "Usage",
+ CellID->982511436],
+Cell[3104, 146, 229, 5, 41, "Notes",
+ CellID->1067943069]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3370, 156, 356, 11, 69, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[3729, 169, 272, 7, 26, "Input",
+ CellID->323990969],
+Cell[CellGroupData[{
+Cell[4026, 180, 299, 8, 26, "Input",
+ CellID->805278218],
+Cell[CellGroupData[{
+Cell[4350, 192, 265, 5, 21, "Print",
+ CellID->695600406],
+Cell[4618, 199, 226, 4, 21, "Print",
+ CellID->8143766],
+Cell[4847, 205, 425, 9, 60, "Print",
+ CellID->1398001158],
+Cell[5275, 216, 395, 9, 41, "Print",
+ CellID->210054166],
+Cell[5673, 227, 402, 9, 41, "Print",
+ CellID->1074852716],
+Cell[6078, 238, 1025, 25, 76, "Print",
+ CellID->1200795311],
+Cell[7106, 265, 3017, 77, 160, "Print",
+ CellID->1790053224]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10172, 348, 252, 6, 26, "Input",
+ CellID->1760106952],
+Cell[10427, 356, 168, 4, 25, "Output",
+ CellID->326527818]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10632, 365, 203, 5, 26, "Input",
+ CellID->52297809],
+Cell[10838, 372, 118, 3, 25, "Output",
+ CellID->1830365199]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11005, 381, 57, 1, 43, "TutorialsSection",
+ CellID->250839057],
+Cell[11065, 384, 377, 12, 16, "Tutorials",
+ CellID->341631938]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11479, 401, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[11537, 404, 200, 4, 16, "SeeAlso",
+ CellID->929782353]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
